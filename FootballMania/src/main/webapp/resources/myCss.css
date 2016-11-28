@@ -1,0 +1,244 @@
+  
+.carousel-inner .item > img
+.carousel-inner .item > a > img
+{
+	height: 300px;
+	margin: auto;
+ 	width: 800px;
+}
+
+.social-login p{
+margin-top: 10px;
+color: black;
+text-align: center;
+}
+.social-login ul{
+	margin:10px;
+	padding:0;
+	list-style-type:none;
+}
+.social-login ul li{
+	width:10%;
+	float:right;
+    clear:fix;
+}
+.social-login ul li a{
+	font-size:13px;
+	color:black;
+	padding:5px 0;
+	display:block;
+}
+.social-login ul li:nth-child(4) a{
+	background:#2E4172;
+}
+
+.social-login ul li:nth-child(1) a{
+	background:#3b5998;
+}
+.social-login ul li:nth-child(2) a{
+	background:#e74c3d;
+}
+.social-login ul li:nth-child(3) a{
+	background:#3698d9;
+}
+
+.navbar{
+	background: #2E4172;
+	
+}
+
+.navbar-nav li a{
+	color:#ccccff;
+}
+.navbar-nav li a:hover{
+	background: #9999ff;
+	color: black;
+}
+.nav.navbar-nav ul li a {
+color: black;
+}
+
+ #footer  	.navbar{
+padding-top: 1px;
+}
+
+body{
+    background:#B4C6F1;
+}
+.form-body{
+    background:#fff;
+    padding:5px;
+}
+.login-form{
+    background:rgba(128,128,128,128);
+	padding:40px;
+	border-top:30px solid#3e4043;
+}
+.innter-form{
+	padding-top:30px;
+}
+.final-login li{
+	width:100%;
+}
+
+.nav-tabs>li{
+	color:#222 !important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #fff;
+    background-color: #8080ff;
+    border: none !important;
+    border-bottom-color: transparent;
+	border-radius:none !important;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border: none !important;
+    border-radius:none !important;
+	text-transform:uppercase;
+	font-size:16px;
+	
+}
+
+.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
+    font-size:16px;
+	padding:10px;
+	border:1px solid#ccc;
+	outline:none;
+	width:100%;
+	margin:8px 0;
+	}
+	
+.sa-innate-form button{
+	border:1px solid#2E4172;
+	background:#2E4172;
+	color:#ccccff;
+	padding:10px 25px;
+	font-size:14px;
+	margin-top:5px;
+	}
+	.sa-innate-form button:hover{
+	border:1px black;
+	background: #9999ff;
+	color: black;
+	}
+	
+	.sa-innate-form a{
+	color: black;
+	}
+	.sa-innate-form a:hover{
+	color: red;
+	}
+    .sa-innate-form p{
+        font-size:13px;
+        padding-top:10px;
+    }
+
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #2E4172;
+  border-radius: 5px;
+  }
+
+.jumbotron {
+background: #2E4172;
+color: #FFF;
+border-radius: 100px;
+}
+.jumbotron-sm { 
+padding-top: 5px;
+padding-bottom: 5px; }
+
+.jumbotron small {
+color: #FFF;
+}
+
+.jumbotron-sm .h1{
+	font-size: 32px;
+}
+.h1 small {
+font-size: 24px;
+}
+
+.logo {
+	height: 120px;
+	
+}
+.dropdown .dropdown-menu{
+	background:#ccccff;
+}
+
+.row button{
+border:1px solid#808080;
+	background:#2E4172;
+	color:#ccccff;
+	padding:10px 25px;
+	font-size:14px;
+	margin-top:5px;
+}
+
+.row button:hover{
+	border:1px black;
+	background: #9999ff;
+	color: black;
+}
+
+#signUp .modal-content .modal-body p{
+color: #2E4172;
+font-size: 24px;	
+}
+
+#Login .modal-content .modal-body p{
+color: #2E4172;
+font-size: 24px;	
+}
+
+.label-primary{
+	background: #2E4172;
+}
+
+#myCarousel .carousel-inner {
+	margin-top: -20px;
+	margin-botton: 100px;
+}
+
+#footer .navbar{
+	margin-bottom: -5px;
+}
+
+
+.row > button {
+border:1px solid#808080;
+	background:#2E4172;
+	color:#ccccff;
+	padding:10px 25px;
+	font-size:14px;
+	margin-top:5px;
+	}
+
+.row > button:hover {
+	background: #9999ff;
+	color: black;
+}
+
+.row .button1 { 
+
+	background:#4d4dff;
+	color:#ccccff;
+	font-size:14px;
+	margin-top:5px;
+	
+	
+}
+
+.row .button1:hover {
+	background: #9999ff;
+	color: black;
+}
+
+
+
+
