@@ -1,11 +1,15 @@
 package footballmania.Model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="User_Details")
-public class registerModel {
+public class registerModel implements Serializable{
 
+	
+	private static final long serialVersionUID = 1L;
 	@Id
 	private String userId;
 	private String firstName;

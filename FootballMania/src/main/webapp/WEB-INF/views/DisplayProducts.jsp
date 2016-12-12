@@ -8,8 +8,10 @@
 
   
  <div class= "container">
+ 
  <div ng-controller="displayController">
 <div id="teamDis" class="jumbotron">
+<form:form ng-controller="displayController" method="POST" action="updateQuantity" commandName="comm">
 <table class="table table-bordered">
 <tr>
 <th>Product ID</th>
@@ -18,7 +20,9 @@
 <th>Product Supplier</th>
 <th>Product Quantity</th>
 <th>Product Image</th>
+<th></th>
 </tr>
+
   <tr ng-repeat="prod in prods">
     <td>{{ prod.prodId }}</td>
     <td>{{ prod.prodName }}</td>
@@ -26,8 +30,10 @@
     <td>{{ prod.prodSupp }}</td>
     <td>{{prod.prodQuant}}</td>
     <td><img src="./resources/{{prod.prodId}}.jpg" height="100px" width="100px" /></td>
+    <td><a href="add?prodId={{prod.prodId}}">Add to Cart</a></td>
   </tr>
 </table>
+</form:form>
 </div>
 </div>
  

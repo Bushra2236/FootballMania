@@ -7,10 +7,10 @@ import javax.persistence.*;
 public class userCredModel {
 
 	@Id
-	private String userId;
-	private String userPassword;
-	private String userRole;
-	private Boolean status;
+	private String userName;
+	private String password;
+	private String role;
+	private Boolean enabled;
 	
 	
 	public userCredModel() {
@@ -18,44 +18,46 @@ public class userCredModel {
 	}
 
 
-	public String getUserId() {
-		return userId;
+	public String getUserName() {
+		return userName;
 	}
 
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 
-	public String getUserPassword() {
-		return userPassword;
+	public String getPassword() {
+		return password;
 	}
 
 
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 
-	public String getUserRole() {
-		return userRole;
+	public String getRole() {
+		return role;
 	}
 
 
-	public void setUserRole(String userRole) {
-		this.userRole = userRole;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 
-	public Boolean getStatus() {
-		return status;
+	public Boolean getEnabled() {
+		return enabled;
 	}
 
 
-	public void setStatus(Boolean status) {
-		this.status = status;
+	public void setEnabled(Boolean enabled) {
+		this.enabled = enabled;
 	}
+
+
 	
 	
 }

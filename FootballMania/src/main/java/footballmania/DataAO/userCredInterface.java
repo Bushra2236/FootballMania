@@ -5,4 +5,5 @@ import footballmania.Model.userCredModel;
 public interface userCredInterface {
 
 	void addUserCred(userCredModel ucm);
+	void isValidUser(String userID);
 }

@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import footballmania.DataAO.addCategoryInterface;
-import footballmania.DataAO.addProdInterface;
+import footballmania.DataAO.CategoryInterface;
+import footballmania.DataAO.ProdInterface;
 import footballmania.DataAO.registerInterface;
 import footballmania.DataAO.userCredInterface;
-import footballmania.Model.addCategoryModel;
-import footballmania.Model.addProductModel;
 import footballmania.Model.registerModel;
 import footballmania.Model.userCredModel;
 
@@ -28,10 +26,10 @@ registerInterface addRM;
 userCredInterface user;
 
 @Autowired
-addCategoryInterface category;
+CategoryInterface category;
 
 @Autowired
-addProdInterface product;
+ProdInterface product;
 
 @RequestMapping("/")
 public ModelAndView newPage(HttpSession session){
@@ -49,8 +47,10 @@ public ModelAndView registerUser(registerModel reg){
 	addRM.registerUser(reg);
 	ModelAndView MnV = new ModelAndView("index","commands",new registerModel());
 	userCredModel ucm = new userCredModel();
-	ucm.setUserId(reg.getUserId());
-	ucm.setUserPassword(reg.getUserPassword());
+	ucm.setUserName(reg.getUserId());
+	ucm.setPassword(reg.getUserPassword());
+	ucm.setRole("ROLE_USER");
+	ucm.setEnabled(true);
 	user.addUserCred(ucm);
 	return MnV;
 }

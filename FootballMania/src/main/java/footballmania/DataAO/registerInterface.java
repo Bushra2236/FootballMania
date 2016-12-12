@@ -1,6 +1,6 @@
 package footballmania.DataAO;
 
-import footballmania.Model.addProductModel;
+
 import footballmania.Model.registerModel;
 
 public interface registerInterface {

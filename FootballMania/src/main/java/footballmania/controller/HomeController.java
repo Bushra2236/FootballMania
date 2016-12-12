@@ -30,4 +30,10 @@ public class HomeController
 	return MnV;
 }
 
+@RequestMapping("register")
+public ModelAndView register(){
+	ModelAndView MnV = new ModelAndView("register","commands", new registerModel());
+	return MnV;
 }
+ 
+ }

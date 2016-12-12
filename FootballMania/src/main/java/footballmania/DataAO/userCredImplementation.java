@@ -26,4 +26,10 @@ public class userCredImplementation implements userCredInterface {
 		
 	}
 
+	@Override
+	public void isValidUser(String userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

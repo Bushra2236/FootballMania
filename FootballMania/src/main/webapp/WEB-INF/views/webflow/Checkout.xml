@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+<var name="shippingAddress" class="footballmania.Model.ShippingAddress"></var>
+<var name="billingAddress" class="footballmania.Model.BillingAddress"></var>
+<var name="paymentMethod" class="footballmania.Model.paymentMethod"></var>
+<var name="cartDetails" class="footballmania.Model.CartDetails"></var>
+<var name="orderDetails" class="footballmania.Model.OrderDetails"></var>
+
+<on-start>
+<evaluate expression="orderWebFlow.initFlow()" result="flowScope.orderDetails"/>
+</on-start>
+
+<view-state id="flowExecutor" view="shippingAddress.jsp" model="shippingAddress">
+<transition on="submitShippingAddress" to="ShippingDetails"></transition>
+</view-state>
+
+<action-state id="ShippingDetails">
+<evaluate expression="orderWebFlow.addShippingDetails(flowScope.orderDetails,shippingAddress)"></evaluate>
+<transition on="success" to="viewBillingDetails"></transition>
+<transition on= "fail" to="CartCheckout"></transition>
+</action-state>
+
+<view-state id="viewBillingDetails" view="billingAddress.jsp" model="billingAddress">
+<transition on="submitBillingAddress" to="BillingDetails"></transition>
+<transition on="backToShipping" to="flowExecutor"></transition>
+</view-state>
+
+
+<action-state id="BillingDetails">
+<evaluate expression ="orderWebFlow.addBillingDetails(flowScope.orderDetails,billingAddress)"></evaluate>
+<transition on="success" to="viewPaymentMethod"></transition>
+<transition on= "fail" to="CartCheckout"></transition>
+</action-state>
+
+<view-state id="viewPaymentMethod" view="paymentMethod.jsp" model="paymentMethod">
+<transition on="submitPaymentMethod" to="paymentDetails"></transition>
+<transition on="backtoBilling" to="viewBillingDetails"></transition>
+</view-state>
+
+<action-state id="paymentDetails">
+<evaluate expression="orderWebFlow.addPaymentDetails(flowScope.orderDetails,paymentMethod)"></evaluate>
+<transition on="success" to="orderConfirm"></transition>
+</action-state>
+
+<view-state id="orderConfirm" view="OrderConfirm.jsp">
+<transition on="finalHome" to="toHome"></transition>
+</view-state>
+
+<end-state id="toHome" view="home.jsp"></end-state>
+
+<global-transitions> <transition on="cancel" to="toCartView"></transition></global-transitions>
+</flow>

@@ -13,9 +13,9 @@ import org.springframework.stereotype.Repository;
 
 import com.google.gson.Gson;
 
-import footballmania.Model.addProductModel;
+import footballmania.Model.ProductModel;
 import footballmania.Model.registerModel;
-import footballmania.Model.addTeamModel;
+
 
 
 @Repository
@@ -41,7 +41,7 @@ public class registerImplementation implements registerInterface {
 		
 		Session session= sessionFactory.openSession();
 		Transaction trans = session.beginTransaction();
-		Criteria criteria = session.createCriteria(addProductModel.class);
+		Criteria criteria = session.createCriteria(ProductModel.class);
 		criteria.add(Restrictions.eq("prodCat", id));
 		List list = criteria.list();
 		Gson gson = new Gson();
@@ -57,7 +57,7 @@ public class registerImplementation implements registerInterface {
 		
 		Session session= sessionFactory.openSession();
 		Transaction trans = session.beginTransaction();
-		Query query = session.createQuery("from addTeamModel");
+		Query query = session.createQuery("from TeamModel");
 		List list = query.list();
 		Gson gson = new Gson();
 		String teamList = gson.toJson(list);

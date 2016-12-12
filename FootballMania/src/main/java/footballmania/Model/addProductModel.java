@@ -24,7 +24,9 @@ public class addProductModel {
 	private String prodColor;
 	@Column(name="Product_Size")
 	private String prodSize;
-
+	@Column(name="Product_Price")
+	private int prodPrice;
+	
 	public addProductModel() {
 		//super();
 	}
@@ -75,6 +77,12 @@ public class addProductModel {
 	}
 	public void setProdSize(String prodSize) {
 		this.prodSize = prodSize;
+	}
+	public int getProdPrice() {
+		return prodPrice;
+	}
+	public void setProdPrice(int prodPrice) {
+		this.prodPrice = prodPrice;
 	}
 
 }

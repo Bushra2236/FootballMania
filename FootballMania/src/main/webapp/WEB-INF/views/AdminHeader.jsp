@@ -33,14 +33,15 @@
   <div class="navbar-header">
   <img class="logo" src= "resources/logo.png">    
     </div>
-    
+    	
     <ul class="nav navbar-nav">
     <li class="active">      
     <a href="home">Home</a></li>
-    <li><a href="AddProd">Manage Products</a></li>
-     <li><a href="AddTeam">Manage Teams</a></li>
-     <li><a href="AddSupp">Manage Supplier</a></li>
-     <li><a href="AddCat">Manage Categories</a></li>  
+    <li><a href="ManageProd">Manage Products</a></li>
+     <li><a href="ManageTeam">Manage Teams</a></li>
+     <li><a href="ManageSupp">Manage Supplier</a></li>
+     <li><a href="ManageCat">Manage Categories</a></li> 
+     <li><a href="ManageUsers">Manage Users</a></li> 
      </ul>
     
 </nav>
